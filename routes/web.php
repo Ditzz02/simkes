@@ -4,28 +4,30 @@ use App\Http\Middleware\DebugRequest;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KhsController;
 use App\Http\Controllers\KrsController;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Request;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ViewController;
 use App\Http\Controllers\DosenController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\NilaiController;
+use App\Http\Controllers\PrintController;
+use App\Http\Controllers\ProdiController;
 use App\Http\Controllers\BerandaController;
+use App\Http\Controllers\KaprodiController;
 use App\Http\Middleware\AddNotificationData;
 use App\Http\Controllers\BimbinganController;
-use App\Http\Controllers\KaprodiController;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\KonsultasiController;
 use App\Http\Controllers\MatakuliahController;
-use App\Http\Controllers\PrintController;
-use App\Http\Controllers\ProdiController;
+
 
 Route::get('/', function () {
     return view('Template.welcome');
 });
 
 Route::get('/login', function () {
-    return view('pengguna.login');
+    return view('Pengguna.Login');
 })->name('login');
 
 Route::post('/postlogin', [LoginController::class, 'postlogin'])->name('postlogin');

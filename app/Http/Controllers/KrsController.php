@@ -14,13 +14,13 @@ class KrsController extends Controller
     {
         $mahasiswa = Mahasiswa::all();
         $mataKuliah = MataKuliah::all();
-        return view('krs.tambah', compact('mahasiswa', 'mataKuliah'));
+        return view('Krs.Tambah', compact('mahasiswa', 'mataKuliah'));
         
     }
     public function tambahNilai($mahasiswa_id)
     {
         $mahasiswa = Mahasiswa::find($mahasiswa_id);
-        return view('krs.nilai', compact('mahasiswa'));
+        return view('Krs.Nilai', compact('mahasiswa'));
     }
 
     public function simpanNilai(Request $request)
@@ -88,7 +88,7 @@ public function store(Request $request)
     public function index()
     {
         $mahasiswa = Mahasiswa::all();
-        return view('krs.daftar', compact('mahasiswa'));
+        return view('Krs.Daftar', compact('mahasiswa'));
     }
 
 

@@ -35,7 +35,7 @@ class KhsController extends Controller
             $item->grade = $this->convertToGrade($item->nilai)['grade'];
         }
 
-        return view('khs.show', compact('mahasiswa', 'krs', 'ips', 'ipk', 'totalSks', 'semesters'));
+        return view('Khs.show', compact('mahasiswa', 'krs', 'ips', 'ipk', 'totalSks', 'semesters'));
     }
 
     public function hitungIPK($mahasiswaId)
@@ -83,7 +83,7 @@ class KhsController extends Controller
     public function tampil()
     {
         $mahasiswa = Mahasiswa::all(); // Mengambil semua data mahasiswa
-        return view('khs.daftar', compact('mahasiswa'));
+        return view('Khs.daftar', compact('mahasiswa'));
     }
     
     private function convertToGrade($nilai)

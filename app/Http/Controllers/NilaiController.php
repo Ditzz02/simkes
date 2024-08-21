@@ -21,7 +21,7 @@ class NilaiController extends Controller
         $mahasiswa = Mahasiswa::all();
         
         // Tampilkan view dengan data mahasiswa
-        return view('nilai.daftar', compact('mahasiswa'));
+        return view('Nilai.Daftar', compact('mahasiswa'));
     }
 
     /**
@@ -44,7 +44,7 @@ class NilaiController extends Controller
                   ->with('mataKuliah')
                   ->get();
 
-    return view('krs.partials.mata_kuliah_list', compact('krsList'))->render();
+    return view('Krs.partials.mata_kuliah_list', compact('krsList'))->render();
 }
 
     /**

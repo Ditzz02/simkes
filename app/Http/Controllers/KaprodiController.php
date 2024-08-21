@@ -14,7 +14,7 @@ class KaprodiController extends Controller
     public function index()
     {
         $konsultasi = Konsultasi::with(['mahasiswa', 'dosen'])->get();
-        return view('kaprodi.index', compact('konsultasi'));
+        return view('Kaprodi.index', compact('konsultasi'));
     }
 
     public function approve($id)
@@ -29,7 +29,7 @@ class KaprodiController extends Controller
     public function show($id)
     {
         $konsultasi = Konsultasi::findOrFail($id);
-        return view('kaprodi.show', compact('konsultasi'));
+        return view('Kaprodi.show', compact('konsultasi'));
     }
 
     public function utama()
